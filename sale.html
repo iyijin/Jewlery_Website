@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limited Sale | MAVI Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand-logo">MAVI</a>
+    <nav>
+      <a href="index.html">Collection</a>
+      <a href="sale.html" class="sale-link active">Archive Sale</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="cart-btn" id="openCart">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-subtitle" style="color: var(--accent-sale);">Limited Offer</span>
+      <h1 class="hero-title">The Seasonal Archive Sale</h1>
+      <p class="hero-desc">Selected minimal pieces at reduced prices for a limited time. All items crafted in limited quantities.</p>
+    </section>
+
+    <section class="content-section">
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="badge-sale">30% Off</span>
+          <div class="product-image-wrap">
+            <img src="Stacked rings.jpg" alt="Stacked Gold Band">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Rings</span>
+            <h2 class="product-title">Minimal Stacked Band</h2>
+            <p class="product-price">
+              <span class="price-original">$120.00</span>
+              <span class="price-sale">$84.00</span>
+            </p>
+            <button class="btn-add" onclick="addToCart('Minimal Stacked Band (Sale)', 84)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <span class="badge-sale">25% Off</span>
+          <div class="product-image-wrap">
+            <img src="Rosalie necklace.jpg" alt="Rosalie Necklace ">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Necklaces</span>
+            <h2 class="product-title">Rosalie Necklace</h2>
+            <p class="product-price">
+              <span class="price-original">$150.00</span>
+              <span class="price-sale">$112.50</span>
+            </p>
+            <button class="btn-add" onclick="addToCart('Rosalie Necklace (Sale)', 112.50)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <span class="badge-sale">20% Off</span>
+          <div class="product-image-wrap">
+            <img src="simple statement earrings.jpg" alt="Essential Mini Hoops">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Earrings</span>
+            <h2 class="product-title">Essential Mini Hoops</h2>
+            <p class="product-price">
+              <span class="price-original">$95.00</span>
+              <span class="price-sale">$76.00</span>
+            </p>
+            <button class="btn-add" onclick="addToCart('Essential Mini Hoops (Sale)', 76)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">MAVI</div>
+    <p class="footer-text">Elevating everyday moments with subtle luxury and thoughtful design.</p>
+    <div class="footer-copy">&copy; 2026 MAVI Jewelry. All rights reserved.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Selection</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
