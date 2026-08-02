@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAVI | Minimal Fine Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand-logo">MAVI</a>
+    <nav>
+      <a href="index.html" class="active">Collection</a>
+      <a href="sale.html" class="sale-link">Archive Sale</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="cart-btn" id="openCart">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="hero-subtitle">Handcrafted Simplicity</span>
+      <h1 class="hero-title">Timeless Minimalist Fine Jewelry</h1>
+      <p class="hero-desc">Designed for everyday elegance. Crafted using ethically sourced 18k gold and sterling silver.</p>
+    </section>
+
+    <section class="content-section">
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">All Items</button>
+        <button class="tab-btn" data-filter="rings">Rings</button>
+        <button class="tab-btn" data-filter="necklaces">Necklaces</button>
+        <button class="tab-btn" data-filter="earrings">Earrings</button>
+      </div>
+
+      <div class="product-grid">
+        <!-- Rings -->
+        <article class="product-card" data-category="rings">
+          <div class="product-image-wrap">
+            <img src="Solitaire Ring.jpg" alt="Classic Solitaire Ring">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Rings</span>
+            <h2 class="product-title">Classic Solitaire Ring</h2>
+            <p class="product-price">$180.00</p>
+            <button class="btn-add" onclick="addToCart('Classic Solitaire Ring', 180)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="rings">
+          <div class="product-image-wrap">
+            <img src="Silver Ring.jpg" alt="Sterling Silver Minimal Stacked Band">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Rings</span>
+            <h2 class="product-title">Sterling Silver Minimal Stacked Band </h2>
+            <p class="product-price">$220.00</p>
+            <button class="btn-add" onclick="addToCart('Sterling Silver Minimal Stacked Band', 120)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="rings">
+          <div class="product-image-wrap">
+            <img src="Stacked rings.jpg" alt="18k gold Stacked Rings">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Rings</span>
+            <h2 class="product-title"> 18k Gold Stacked Band</h2>
+            <p class="product-price">$120.00</p>
+            <button class="btn-add" onclick="addToCart('18k gold Stacked Rings', 120)">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Necklaces -->
+        <article class="product-card" data-category="necklaces">
+          <div class="product-image-wrap">
+            <img src="Solitary Chain Pendant.jpg" alt="Solitary Chain Pendant">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Necklaces</span>
+            <h2 class="product-title">Solitary Chain Pendant</h2>
+            <p class="product-price">$210.00</p>
+            <button class="btn-add" onclick="addToCart('Solitary Chain Pendant', 210)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="necklaces">
+          <div class="product-image-wrap">
+            <img src="Rosalie necklace.jpg" alt=" Rosalie Necklace">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Necklaces</span>
+            <h2 class="product-title">Rosalie necklace</h2>
+            <p class="product-price">$180.00</p>
+            <button class="btn-add" onclick="addToCart('Rosalie Necklace', 150)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="necklaces">
+          <div class="product-image-wrap">
+            <img src="Silver Clover Necklace.jpg" alt=" Silver Clover Necklace">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Necklaces</span>
+            <h2 class="product-title">Silver Clover Necklace</h2>
+            <p class="product-price">$120.00</p>
+            <button class="btn-add" onclick="addToCart('Silver Clover Necklace', 150)">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Earrings -->
+        <article class="product-card" data-category="earrings">
+          <div class="product-image-wrap">
+            <img src="simple statement earrings.jpg" alt="Simple statement Earrings">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Earrings</span>
+            <h2 class="product-title">Essential Mini Hoops</h2>
+            <p class="product-price">$95.00</p>
+            <button class="btn-add" onclick="addToCart('Simple statement Earrings', 95)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="earrings">
+          <div class="product-image-wrap">
+            <img src="Firework Earrings Aquamarine.jpg" alt="Baroque Aquamarine Pearl Studs">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Earrings</span>
+            <h2 class="product-title">Firework Earrings Aquamarine</h2>
+            <p class="product-price">$200.00</p>
+            <button class="btn-add" onclick="addToCart('Baroque  Aquamarine Pearl Studs', 130)">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="earrings">
+          <div class="product-image-wrap">
+            <img src="heart shaped silver earrings.jpg" alt="Heart Shaped Silver Earrings">
+          </div>
+          <div class="product-info">
+            <span class="product-category">Earrings</span>
+            <h2 class="product-title">Heart Shaped Silver Earrings</h2>
+            <p class="product-price">$130.00</p>
+            <button class="btn-add" onclick="addToCart('Heart Shaped Silver Earrings', 130)">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">MAVI</div>
+    <p class="footer-text">Elevating everyday moments with subtle luxury and thoughtful design.</p>
+    <div class="footer-copy">&copy; 2026 AURA Jewelry. All rights reserved.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Selection</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
